@@ -1,12 +1,13 @@
 from flask import Flask,request
 import requests
+token = "6633917435:AAE6qq-FBcnAH08A_quwG3V3BlJZXANqdo4"
 app = Flask(__name__)
 @app.route("/bot/", methods=['POST', 'GET'])
 def bot():
     if request.method=="POST":
         data=request.get_json()
         chat_id=data["message"]["chat"]["id"]
-        url="https://api.telegram.org/bot6190918955:AAH6JhL8iWSkLg77mvBbMUJQ1QqLahJGD_g/sendMessage"
+        url=f"https://api.telegram.org/bot{token}/sendMessage"
         payload={
             "chat_id":chat_id,
             "text":"salom"
