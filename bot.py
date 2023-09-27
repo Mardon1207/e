@@ -16,4 +16,4 @@ def bot():
         print(r.status_code, r.text)
         return {"message":"ok"}
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True)fgvbfdzxbv
